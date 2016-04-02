@@ -1,0 +1,119 @@
+/****************************** Size and shape ******************************/
+.navbar, .navbar-inner {border-radius:0;border:0;margin-bottom:0;}
+.navbar .nav .nav-header {line-height:14px;font-size:14px;}
+.navbar .nav li span {display:block;padding:6px 8px;margin-top:2px;margin-right:2px;margin-bottom:2px;line-height:14px;font-size:14px;color:#eee}
+.navbar .nav li > a {white-space:nowrap;}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {box-shadow:none;}
+.navbar .nav {min-height:47px;padding-top:18px;}
+.bootstrap3a .navbar .nav {padding-top:18px;padding-bottom:18px;}
+
+/* Dropdowns  */
+.nav-collapse .dropdown-menu {min-width:0;}
+.nav-collapse .dropdown-menu a {margin: 0 5px;border:5px 8px solid white;}
+.nav-collapse .dropdown-menu a:hover {border-radius:6px;}
+
+/* Collapsed view */
+.nav-collapse .nav > li > a,
+.nav-collapse .dropdown-menu a {font-weight:400;letter-spacing:1px;}
+
+/* Phones style menu */
+@media (max-width:979px) {
+	.navbar ul.nav {min-height:0;padding-top:0;}
+	div.navbar-inner {padding-left:5px;}
+	.nav-collapse .nav li > a {margin:0;border-radius:0;box-shadow:none;padding-top:4px;padding-bottom:4px;}
+	.nav-collapse ul.dropdown-menu a {border:0;padding-top:2px;padding-bottom:2px;}
+	.nav-collapse ul.dropdown-menu a:hover {border-radius:0;}
+	.nav-collapse .nav > li > a:hover,
+	.nav-collapse .nav > li > a:focus,
+	.nav-collapse .dropdown-menu a:hover,
+	.nav-collapse .dropdown-menu a:focus {border-radius:0;}
+	.nav-collapse .dropdown-menu {margin-left:0;margin-right:0;}
+	.nav-collapse .dropdown-menu a {padding-left:30px;padding-right:8px;}
+}
+/**************************** End size and shape ****************************/
+
+/********************************** Colors **********************************/
+.navbar, .navbar-inner {background-image:none;background-color:#404040;}
+.navbar .nav li > a {text-shadow:none;color:#f0f0f0;}
+.navbar .nav li > a:hover, .navbar .nav li > a:focus {color:#202020;}
+.navbar .nav > li.active > a {color:#6ff;background-color:#404040;}
+.navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {background-color:#a0a0a0;color:#0afff7;}
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus {background-color:#e0e0e0;}
+.navbar .nav > .active > a:hover {background-color:#e0e0e0;color:#0b2cf4;}
+
+/* Dropdowns  */
+.navbar ul.dropdown-menu a {background-color:#fff;color:#404040;border-color: white;}
+.navbar ul.dropdown-menu li.active a {color:#0027FF;}
+.navbar ul.dropdown-menu a:hover {background-image:none;background-color:#c0c0c0;}
+.navbar ul.dropdown-menu > .active > a:hover {background-color:#c0c0c0;}
+.navbar ul.dropdown-menu li.active a:hover, .navbar ul.dropdown-menu li.active a:focus {color:#0027FF;}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {background-image:none;}
+.navbar .nav > li.dropdown.active > .dropdown-toggle {color:#6ff;background-color:#404040;}
+.navbar .nav > li.dropdown.open.active > .dropdown-toggle,
+.navbar .nav > li.dropdown.active > .dropdown-toggle:hover {color:#0027FF;background-color:#c0c0c0;}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {background-image:none;}
+
+/* Carets */
+.navbar .nav li.dropdown > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret {border-bottom-color:#f0f0f0;border-top-color:#f0f0f0}
+
+/* Phones style menu */
+@media (max-width:980px) {
+	.nav-collapse .nav li > a {color:#fff;}
+	.nav-collapse .nav li.active > a {font-weight:400;color:#6ff;}
+	.nav-collapse ul.dropdown-menu a {background-image:none;background-color:#404040;color:#fff;}
+	.nav-collapse ul.dropdown-menu a:hover {background-color:#e0e0e0;}
+	.nav-collapse ul.dropdown-menu li.active a {font-weight:400;color:#6ff;}
+	.nav-collapse ul.dropdown-menu li.active a:hover {color:#0b2cf4;}
+	.nav-collapse .nav > li > a:hover,
+	.nav-collapse .nav > li > a:focus,
+	.nav-collapse .dropdown-menu a:hover,
+	.nav-collapse .dropdown-menu a:focus {background-image:none;}
+	.nav-collapse  ul.dropdown-menu > .active > a:hover {background-color:#e0e0e0;}
+}
+/******************************** End Colors ********************************/
+
+/* Button */
+.navbar .btn-navbar,
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus {
+	border:0 !important;
+	border-radius:0 !important;
+	border-color:transparent !important;
+	box-shadow:none !important;
+	background-image:none !important;
+	background-color:transparent !important;
+}
+.navbar .btn-navbar:hover {background-color:#a0a0a0 !important}
+ul.language-selector li {display:inline-block;}
+/* End button */
+
+
+/* Tweaks */
+.navbar .nav > li > a {padding-left:8px;padding-right:8px;padding-top:6px;padding-bottom:6px;}
+.navbar-inner {padding-right:5px;}
+.navbar .btn-navbar {margin:0;}
+.navbar .btn-navbar span.icon-bar {width:20px;height:3px;margin-top:0;margin-bottom:3px;}
+/* End Tweaks */
+
+/* Language Selector */
+.navbar .nav span.language-flag {padding-right:0;padding-left:0;display:inline;}
+.navbar .nav span.language-flag img {padding-bottom:2px;}
+.navbar .nav span.language-name{padding-right:0;padding-left:0;display:inline;}
+.navbar .nav span.language-flag + span.language-name {margin-left:4px;}
+.navbar ul.language-selector {margin-right:0;}
+/* End Language Selector */
+
+/* Brand */
+.navbar a.brand {padding:9px;}
+.bootstrap3a .navbar a.brand {height:68px;padding:9px 10px 8px 7px;}
+.navbar a.brand,
+.navbar a.brand:hover {color:#FFF;text-decoration:none;text-shadow:none;}
+/* End Brand */

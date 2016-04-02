@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>SMZ Navbar</name>
+	<description>MOD_SMZ_NAVBAR_XML_DESCRIPTION</description>
+	<author>Sergio Manzi</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (C) Sergio Manzi. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorEmail>info@smz.it</authorEmail>
+	<authorUrl>http://smz.it</authorUrl>
+	<version>3.5.1</version>
+	<files>
+		<filename module="mod_smz_navbar">mod_smz_navbar.php</filename>
+		<filename>helper.php</filename>
+		<filename>mod_smz_navbar.xml</filename>
+	</files>
+	<media destination="mod_smz_navbar" folder="media">
+		<folder>css</folder>
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_smz_navbar.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_smz_navbar.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="menutype" type="menu" label="MOD_SMZ_NAVBAR_MENUTYPE_LABEL" description="MOD_SMZ_NAVBAR_MENUTYPE_DESC" />
+				<field name="base" type="menuitem" label="MOD_SMZ_NAVBAR_ACTIVE_LABEL" description="MOD_SMZ_NAVBAR_ACTIVE_DESC">
+					<option value="">JCURRENT</option>
+				</field>
+				<field name="startLevel" type="list" default="1" label="MOD_SMZ_NAVBAR_STARTLEVEL_LABEL" description="MOD_SMZ_NAVBAR_STARTLEVEL_DESC">
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="endLevel" type="list" default="0" label="MOD_SMZ_NAVBAR_ENDLEVEL_LABEL" description="MOD_SMZ_NAVBAR_ENDLEVEL_DESC">
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+				<field name="showAllChildren" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_ALLCHILDREN_LABEL" description="MOD_SMZ_NAVBAR_ALLCHILDREN_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="SMZNavbarOptions">
+				<field name="fullNavbar" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_FULLNAVBAR_LABEL" description="MOD_SMZ_NAVBAR_FULLNAVBAR_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="navbarStyle" type="list" default="nav-pills-dropdown" label="MOD_SMZ_NAVBAR_NAVBARSTYLE_LABEL" description="MOD_SMZ_NAVBAR_NAVBARSTYLE_DESC">
+					<option value="nav-pills-dropdown">MOD_SMZ_NAVBAR_PILLSDROPDOWNS</option>
+					<option value="nav-pills">MOD_SMZ_NAVBAR_BASICPILLS</option>
+					<option value="nav-dropdown">MOD_SMZ_NAVBAR_NAVBAR_DROPDOWNS</option>
+					<option value="nav">MOD_SMZ_NAVBAR_NAVBAR</option>
+				</field>
+				<field name="openDropDownsOnHover" showon="navbarStyle:nav-pills-dropdown,nav-dropdown" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_OPENDROPDOWNSONHOVER_LABEL" description="MOD_SMZ_NAVBAR_OPENDROPDOWNSONHOVER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="navbarVariation" type="list" default="0" label="MOD_SMZ_NAVBAR_NAVBARVARIATION_LABEL" description="MOD_SMZ_NAVBAR_NAVBARVARIATION_DESC">
+					<option value="0">MOD_SMZ_NAVBAR_NORMAL</option>
+					<option value="1">MOD_SMZ_NAVBAR_INVERTED</option>
+				</field>
+				<field name="showIcons" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_SHOWICONS_LABEL" description="MOD_SMZ_NAVBAR_SHOWICONS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="iconsStyle" showon="showIcons:1" type="list" default="1" label="MOD_SMZ_NAVBAR_ICONSCOLOR_LABEL" description="MOD_SMZ_NAVBAR_ICONSCOLOR_DESC">
+					<option value="1">MOD_SMZ_NAVBAR_NORMAL</option>
+					<option value="0">MOD_SMZ_NAVBAR_INVERTED</option>
+				</field>
+				<field name="separatorsStyle" type="list" default="1" label="MOD_SMZ_NAVBAR_SEPARATOR_LABEL" description="MOD_SMZ_NAVBAR_SEPARATOR_DESC">
+					<option value="1">MOD_SMZ_NAVBAR_BOOTSTRAPSTYLE</option>
+					<option value="0">MOD_SMZ_NAVBAR_JOOMLASTYLE</option>
+				</field>
+				<field name="useSitenameForBrand" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_USESITENAMEFORBRAND_LABEL" description="MOD_SMZ_NAVBAR_USESITENAMEFORBRAND_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="navBrand" showon="useSitenameForBrand:0" type="text" filter="raw" label="MOD_SMZ_NAVBAR_NAVBRAND_LABEL" description="MOD_SMZ_NAVBAR_NAVBRAND_DESC" />
+			</fieldset>
+			<fieldset name="SMZLanguageSelector">
+				<field name="showLanguageSelector" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_SMZ_NAVBAR_SHOWLANGUAGESELECTOR_LABEL" description="MOD_SMZ_NAVBAR_SHOWLANGUAGESELECTOR_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="languageSelectorMode" showon="showLanguageSelector:1" type="list" default="list" label="MOD_SMZ_NAVBAR_LANGUAGESELECTORMODE_LABEL" description="MOD_SMZ_NAVBAR_LANGUAGESELECTORMODE_DESC">
+					<option value="list">MOD_SMZ_NAVBAR_LIST</option>
+					<option value="dropdown">MOD_SMZ_NAVBAR_DROPDOWN</option>
+				</field>
+				<field name="languageSelectorStyle" showon="showLanguageSelector:1" type="list" class="btn-group btn-group-yesno" default="flags" label="MOD_SMZ_NAVBAR_LANGUAGESELECTORSTYLE_LABEL" description="MOD_SMZ_NAVBAR_LANGUAGESELECTORSTYLE_DESC">
+					<option value="flags">MOD_SMZ_NAVBAR_LANGUAGESELECTORSTYLE_FLAGS</option>
+					<option value="names">MOD_SMZ_NAVBAR_LANGUAGESELECTORSTYLE_NAMES</option>
+					<option value="both">MOD_SMZ_NAVBAR_LANGUAGESELECTORSTYLE_BOTH</option>
+				</field>
+				<field name="languageSelectorNames" showon="showLanguageSelector:1" type="list" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_LANGUAGESELECTORNAMES_LABEL" description="MOD_SMZ_NAVBAR_LANGUAGESELECTORNAMES_DESC">
+					<option value="1">MOD_SMZ_NAVBAR_LANGUAGESELECTORNAMES_NAMES</option>
+					<option value="0">MOD_SMZ_NAVBAR_LANGUAGESELECTORNAMES_CODES</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="nav_id" type="text" label="MOD_SMZ_NAVBAR_NAV_ID_LABEL" description="MOD_SMZ_NAVBAR_NAV_ID_DESC" />
+				<field name="navclass_sfx" type="text" label="MOD_SMZ_NAVBAR_NAVCLASS_SFX_LABEL" description="MOD_SMZ_NAVBAR_NAVCLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

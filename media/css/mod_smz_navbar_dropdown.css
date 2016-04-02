@@ -1,0 +1,5 @@
+@media(min-width:980px){
+	ul.nav li.dropdown > ul.dropdown-menu {top:90%;}
+	.bootstrap3a ul.nav li.dropdown > ul.dropdown-menu {top:100%;}
+	ul.nav li.dropdown:hover > ul.dropdown-menu {display:block;}
+	}
