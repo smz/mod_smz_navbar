@@ -3,12 +3,12 @@
 	<name>SMZ Navbar</name>
 	<description>MOD_SMZ_NAVBAR_XML_DESCRIPTION</description>
 	<author>Sergio Manzi</author>
-	<creationDate>April 2016</creationDate>
+	<creationDate>March 2017</creationDate>
 	<copyright>Copyright (C) Sergio Manzi. All rights reserved.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>info@smz.it</authorEmail>
 	<authorUrl>http://smz.it</authorUrl>
-	<version>3.5.1</version>
+	<version>3.5.2</version>
 	<files>
 		<filename module="mod_smz_navbar">mod_smz_navbar.php</filename>
 		<filename>helper.php</filename>
