@@ -8,19 +8,26 @@
 	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>info@smz.it</authorEmail>
 	<authorUrl>http://smz.it</authorUrl>
-	<version>3.6.0-dev</version>
+	<version>3.6.0</version>
+	<creationDate>May 2017</creationDate>
+
 	<files>
 		<filename module="mod_smz_navbar">mod_smz_navbar.php</filename>
 		<filename>helper.php</filename>
 		<filename>mod_smz_navbar.xml</filename>
 	</files>
+
 	<media destination="mod_smz_navbar" folder="media">
 		<folder>css</folder>
 	</media>
+
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_smz_navbar.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_smz_navbar.sys.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_smz_navbar.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_smz_navbar.sys.ini</language>
 	</languages>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
