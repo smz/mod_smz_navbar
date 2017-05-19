@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.4" client="site" method="upgrade">
+<extension version="3.0" type="module" client="site" method="upgrade">
 	<name>SMZ Navbar</name>
 	<description>MOD_SMZ_NAVBAR_XML_DESCRIPTION</description>
 	<author>Sergio Manzi</author>
-	<creationDate>March 2017</creationDate>
-	<copyright>Copyright (C) Sergio Manzi. All rights reserved.</copyright>
-	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>info@smz.it</authorEmail>
 	<authorUrl>http://smz.it</authorUrl>
+	<copyright>Copyright (C) 2917 Sergio Manzi. All rights reserved.</copyright>
+	<license>GNU General Public License Version 3 - See LICENSE.txt</license>
 	<version>3.6.0</version>
 	<creationDate>May 2017</creationDate>
 
