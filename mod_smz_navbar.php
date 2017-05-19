@@ -116,8 +116,11 @@ if (count($list))
 			continue;
 		}
 
-//		$class = "item-{$item->id}";
 		$class = '';
+		if ($item->type != 'component')
+		{
+			$class = $item->type;
+		}
 
 		if ($item->deeper)
 		{
@@ -240,11 +243,6 @@ if (count($list))
 					$datatoggle = " data-toggle='dropdown'";
 				}
 
-//				if ($item->type == 'heading')
-//				{
-//					$class = trim('nav-header ' . $class);
-//				}
-
 				// Finsish building up $class
 				if ($class !== '')
 				{
@@ -305,29 +303,15 @@ if (count($list))
 			echo "<ul {$class}>";
 				if ($languageSelectorMode == 'dropdown')
 				{
-					echo "<li class='dropdown parent'><a class='lang-active dropdown-toggle' data-toggle='dropdown' href='#'>";
-					foreach ($languages as $i => $active_language)
-					{
-						if ($active_language->active) break;
-					}
-					if ($params->get('languageSelectorStyle', 'flags') != 'names')
-					{
-						echo "<span class='language-flag'>";
-						echo JHtml::image('mod_languages/' . $active_language->image . '.gif', $active_language->title_native, array('title' => $active_language->title_native), true);
-						echo '</span>';
-					}
-					if ($params->get('languageSelectorStyle', 'flags') != 'flags')
-					{
-						echo $params->get('languageSelectorNames') ? $active_language->title_native : strtoupper($active_language->sef);
-					}
-					echo "<b class='caret'></b>" ;
-					echo "</a><ul class='dropdown-menu'>";
-					unset($languages[$i]);
+					echo "<li class='dropdown parent'><a href='#' class='dropdown-togle' data-toggle='dropdown'>";
+					echo JText::_('MOD_SMZ_NAVBAR_SELECT_LANGUAGE');
+					echo "<b class='caret'></b></a>" ;
+					echo "<ul class='dropdown-menu'>";
 				}
 				foreach ($languages as $language)
 				{
 					$class = 'lang-' . strtolower($language->sef);
-					$class .= $language->active ? ' lang-active' : '';
+					$class .= $language->active ? ' active' : '';
 					$rtl = JLanguage::getInstance($language->lang_code)->isRTL() ? 'rtl' : 'ltr';
 					$language_text = '';
 					if ($params->get('languageSelectorStyle', 'flags') != 'names')
@@ -338,7 +322,7 @@ if (count($list))
 					}
 					if ($params->get('languageSelectorStyle', 'flags') != 'flags')
 					{
-						$language_text .= $params->get('languageSelectorNames') ? $language->title_native : strtoupper($language->sef);
+						$language_text .= "<span class='language-name'>" . ($params->get('languageSelectorNames') ? $language->title_native : strtoupper($language->sef)) . '</span>';
 					}
 					echo "<li class='{$class}' dir='{$rtl}'><a href='{$language->link}'>{$language_text}</a></li>";
 				}
