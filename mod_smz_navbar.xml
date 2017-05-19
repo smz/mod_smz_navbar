@@ -7,7 +7,7 @@
 	<authorUrl>http://smz.it</authorUrl>
 	<copyright>Copyright (C) 2917 Sergio Manzi. All rights reserved.</copyright>
 	<license>GNU General Public License Version 3 - See LICENSE.txt</license>
-	<version>3.6.0</version>
+	<version>3.6.1</version>
 	<creationDate>May 2017</creationDate>
 
 	<files>
@@ -69,10 +69,14 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field name="loadCSS" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_LOADCSS_LABEL" description="MOD_SMZ_NAVBAR_LOADCSS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<field name="navbarStyle" type="list" default="nav-pills-dropdown" label="MOD_SMZ_NAVBAR_NAVBARSTYLE_LABEL" description="MOD_SMZ_NAVBAR_NAVBARSTYLE_DESC">
 					<option value="nav-pills-dropdown">MOD_SMZ_NAVBAR_PILLSDROPDOWNS</option>
-					<option value="nav-pills">MOD_SMZ_NAVBAR_BASICPILLS</option>
 					<option value="nav-dropdown">MOD_SMZ_NAVBAR_NAVBAR_DROPDOWNS</option>
+					<option value="nav-pills">MOD_SMZ_NAVBAR_BASICPILLS</option>
 					<option value="nav">MOD_SMZ_NAVBAR_NAVBAR</option>
 				</field>
 				<field name="openDropDownsOnHover" showon="navbarStyle:nav-pills-dropdown,nav-dropdown" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_SMZ_NAVBAR_OPENDROPDOWNSONHOVER_LABEL" description="MOD_SMZ_NAVBAR_OPENDROPDOWNSONHOVER_DESC">

@@ -11,7 +11,10 @@
 defined('_JEXEC') or die;
 
 // Load Stylesheet.
-JHtml::stylesheet('mod_smz_navbar/mod_smz_navbar.css', false, true, false);
+if ($params->get('loadCSS', 1))
+{
+	JHtml::stylesheet('mod_smz_navbar/mod_smz_navbar.css', false, true, false);
+}
 
 // Include the helper functions.
 require_once __DIR__ . '/helper.php';
