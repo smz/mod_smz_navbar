@@ -7,8 +7,8 @@
 	<authorUrl>http://smz.it</authorUrl>
 	<copyright>Copyright (C) 2917 Sergio Manzi. All rights reserved.</copyright>
 	<license>GNU General Public License Version 3 - See LICENSE.txt</license>
-	<version>3.6.1</version>
-	<creationDate>May 2017</creationDate>
+	<version>3.6.2</version>
+	<creationDate>March 2018</creationDate>
 
 	<files>
 		<filename module="mod_smz_navbar">mod_smz_navbar.php</filename>
