@@ -338,6 +338,8 @@ class ModSMZNavbarHelper
 				{
 					$language->link = JRoute::_('&Itemid=' . $homes['*']->id);
 				}
+
+				$language->link = rtrim($language->link, '/');
 			}
 		}
 
